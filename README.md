@@ -67,54 +67,30 @@ This is the recommended approach for local development. The current directory is
 
 **macOS/Linux**
 
-Build the image:
+1. Build the image:
 
 ```bash
 make docker-build
 ```
 
-Start the container:
+2. Start the container:
 
 ```bash
-make docker-run
-```
-
-Restart the container without stopping it:
-
-```bash
-make docker-restart
-```
-
-Stop the container:
-
-```bash
-make docker-down
+make docker-up
 ```
 
 **Windows (PowerShell)**
 
-Build the image:
+1. Build the image:
 
 ```powershell
 docker compose build
 ```
 
-Start the container:
+2. Start the container:
 
 ```powershell
 docker compose up -d
-```
-
-Restart the container without stopping it:
-
-```powershell
-docker compose restart app
-```
-
-Stop the container:
-
-```powershell
-docker compose down
 ```
 
 The server will be available at `http://127.0.0.1:5001`.
@@ -128,6 +104,34 @@ The server will be available at `http://127.0.0.1:5001`.
 | GET | `/hello/<id>` | `{"message": "Hello World", "id": "MyId-<id>"}` |
 
 `<id>` accepts alphanumeric characters and hyphens (`-`).
+
+### Restarting the container
+
+**macOS/Linux**
+
+```bash
+make docker-restart
+```
+
+**Windows (PowerShell)**
+
+```powershell
+docker compose restart app
+```
+
+### Stopping the container
+
+**macOS/Linux**
+
+```bash
+make docker-down
+```
+
+**Windows (PowerShell)**
+
+```powershell
+docker compose down
+```
 
 ## Cleanup
 

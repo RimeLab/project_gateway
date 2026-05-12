@@ -79,7 +79,6 @@ make docker-build
 make docker-up
 ```
 
-
 **Windows (PowerShell)**
 
 1. Build the image:

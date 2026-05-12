@@ -65,30 +65,26 @@ The server will be available at `http://127.0.0.1:5000`.
 
 This is the recommended approach for local development. The current directory is mounted into the container, so any code changes take effect immediately without rebuilding.
 
-**macOS/Linux**
-
 1. Build the image:
 
+**macOS/Linux**
 ```bash
 make docker-build
 ```
 
-2. Start the container:
-
-```bash
-make docker-up
-```
-
 **Windows (PowerShell)**
-
-1. Build the image:
-
 ```powershell
 docker compose build
 ```
 
 2. Start the container:
 
+**macOS/Linux**
+```bash
+make docker-up
+```
+
+**Windows (PowerShell)**
 ```powershell
 docker compose up -d
 ```

@@ -9,7 +9,7 @@ setup:
 	$(PIP) install -r requirements.txt
 
 run:
-	FLASK_APP=base.py $(PYTHON) -m flask run
+	$(VENV)/bin/uvicorn base:app --reload
 
 clean:
 	rm -rf $(VENV) __pycache__

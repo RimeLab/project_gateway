@@ -1,6 +1,6 @@
 # project_gateway
 
-A simple Flask API gateway.
+A simple FastAPI gateway.
 
 ## Requirements
 
@@ -55,11 +55,12 @@ Activate the virtual environment:
 Start the development server:
 
 ```powershell
-$env:FLASK_APP = "base.py"
-python -m flask run
+uvicorn base:app --reload
 ```
 
-The server will be available at `http://127.0.0.1:5000`.
+The server will be available at `http://127.0.0.1:8000`.
+
+Interactive API docs are available at `http://127.0.0.1:8000/docs`.
 
 ## Running with Docker
 
@@ -93,7 +94,9 @@ docker compose build
 docker compose up -d
 ```
 
-The server will be available at `http://127.0.0.1:5001`.
+The server will be available at `http://127.0.0.1:8001`.
+
+Interactive API docs are available at `http://127.0.0.1:8001/docs`.
 
 ## Endpoints
 
